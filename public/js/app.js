@@ -5,7 +5,7 @@ const weatherForm = document.querySelector('button').addEventListener('click',(e
     e.preventDefault()
     const data1 = document.querySelector('input').value
     para1.textContent ='Loading....'
-    fetch('http://localhost:3000/weather?address='+data1).then((response)=>{
+    fetch('/weather?address='+data1).then((response)=>{
         response.json().then((data)=>{
          if(data.error){
             para1.textContent = data.error
